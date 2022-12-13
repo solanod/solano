@@ -27,5 +27,6 @@ class Municipio(models.model):
     Nombre = models.CharField(max_length=100,blank=True,null=True)
   
 class Factura(models.Model):
-            
+    pass
+        
 # Create your models here.
