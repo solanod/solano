@@ -12,6 +12,7 @@ class Usuario (models.Model):
     Municipio = models.ForeignKey("Municipio",null=True,blank=True)
     foto = models.ImageField(imagen="imagen/",null=True,blank=True)
     Login = models.OneToOneField(User,on_delete=models.CASCADE,db_column="login_id")
+    Role = models.CharField(max_length=100,blank=True,null=True)
 
 
 class Pais (models.Model):
@@ -23,6 +24,8 @@ class Departamento (models.Model):
     Nombre = models.CharField(max_length=100,blank=True,null=True) 
 class Municipio(models.model):
     id = models.AutoField()
-    Nombre = models.CharField(max_length=100,blank=True,null=True)  
-        
+    Nombre = models.CharField(max_length=100,blank=True,null=True)
+  
+class Factura(models.Model):
+            
 # Create your models here.
